@@ -1,7 +1,7 @@
 import {Component} from 'react';
-import { InputForm } from './InputForm';
-import { Filter } from './Filter';
-import { ContactList } from './ContactList';
+import { InputForm } from './InputForm/InputForm';
+import { Filter } from './Filter/Filter';
+import { ContactList } from './ContactLList/ContactList';
 import Notiflix from 'notiflix';
 import { nanoid } from 'nanoid';
 
@@ -32,6 +32,7 @@ export class App extends Component {
       contact => contact.id !== id)
     }))
   }
+  
   render() {
     const { filter, contacts } = this.state;
     const filterToLowCase = filter.toLowerCase();
